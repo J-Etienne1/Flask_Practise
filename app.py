@@ -55,7 +55,7 @@ if __name__ == '__main__':
 ## Tutorial - 4 - HTML Templates
 ## &
 ## Tutorial - 5 - Static Files
-
+"""
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -67,6 +67,46 @@ def Profile(name):
 
 if __name__ == '__main__':
     app.run()
+
+"""
+
+
+## Tutorial - 6 -  Mapping Multiple URLs
+
+"""
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+
+@app.route('/')
+@app.route('/<user>')
+def index(user=None):
+    return render_template('user.html', user=user)
+
+
+if __name__ == '__main__':
+    app.run()
+"""
+
+
+
+## Tutorial - 7 -  Mapping Multiple URLs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
